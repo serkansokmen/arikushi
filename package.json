@@ -1,0 +1,26 @@
+{
+  "name": "arikushi",
+  "version": "1.0.0",
+  "description": "Generates Japanese word mapping from Latin strings",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/serkansokmen/arikushi.git"
+  },
+  "keywords": [
+    "generate",
+    "latin",
+    "japanese",
+    "string",
+    "mapping"
+  ],
+  "author": "Serkan Sokmen <e.serkan.sokmen@gmail.com> (http://serkansokmen.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/serkansokmen/arikushi/issues"
+  },
+  "homepage": "https://github.com/serkansokmen/arikushi#readme"
+}
