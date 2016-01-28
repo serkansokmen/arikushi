@@ -9,5 +9,4 @@ Generate Japanese word mapping from Latin strings
 var arikushi = require('arikushi');
 var str = "Hello World";
 var converted = arikushi.convert(str);
-
 ```
