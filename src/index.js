@@ -15,5 +15,21 @@ module.exports = {
       }
     }
     return result;
+  },
+
+  random: function(size) {
+    var keys = [];
+    var vals = [];
+    var result = '';
+    size = size || 1;
+    Object.keys(mapping).forEach(function(key) {
+      var val = mapping[key];
+      keys.push(key);
+      vals.push(val);
+    });
+    for (var i=0; i<size; i++) {
+      result += vals[i];
+    }
+    return result;
   }
 };

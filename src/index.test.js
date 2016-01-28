@@ -42,4 +42,14 @@ describe('arikushi', function() {
       }
     });
   });
+
+  describe('random', function() {
+    it('should return a random result', function() {
+      var result = arikushi.random(3);
+      expect(result).to.be.a('string');
+
+      result = arikushi.random();
+      expect(result).to.be.a('string');
+    });
+  });
 });
