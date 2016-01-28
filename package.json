@@ -1,10 +1,10 @@
 {
   "name": "arikushi",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Generates Japanese word mapping from Latin strings",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha src/index.test.js -w"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/serkansokmen/arikushi/issues"
   },
-  "homepage": "https://github.com/serkansokmen/arikushi#readme"
+  "homepage": "https://github.com/serkansokmen/arikushi#readme",
+  "devDependencies": {
+    "chai": "3.5.0",
+    "mocha": "2.4.4"
+  }
 }
