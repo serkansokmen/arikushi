@@ -2,6 +2,12 @@
 
 Generate Japanese word mapping from Latin strings
 
+#### Installation
+
+```
+npm install arikushi
+```
+
 #### Usage
 
 ```javascript
