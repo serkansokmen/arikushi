@@ -1,5 +1,5 @@
 # arikushi
-Generate Japanese word mapping from Latin strings
+Generate Japanese word mapping from Latin characters
 
 [![Version](https://img.shields.io/npm/v/arikushi.svg)](https://www.npmjs.com/package/arikushi)
 [![Travis](https://img.shields.io/travis/serkansokmen/arikushi.svg?style=flat-square)](https://travis-ci.org/serkansokmen/arikushi)
