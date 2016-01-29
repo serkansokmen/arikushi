@@ -1,16 +1,14 @@
-var shuffle = require('knuth-shuffle').knuthShuffle;
-var mapping = require('./mapping.json').mapping;
+import { shuffle } from 'knuth-shuffle';
+import { mapping } from './mapping.json';
 
-module.exports = {
-  mapping: mapping,
-  convert: function(str) {
-
+export default {
+  convert: (str) => {
     if (str === null || (str != null && typeof str !== 'string')) {
       return '';
     }
-    var result = '';
-    for (var i = 0; i < str.length; i++) {
-      var char = str.charAt(i).toUpperCase();
+    let result = '';
+    for (let i = 0; i < str.length; i++) {
+      const char = str.charAt(i).toUpperCase();
       if (mapping.hasOwnProperty(char)) {
         result += mapping[char];
       }
@@ -18,25 +16,25 @@ module.exports = {
     return result;
   },
 
-  random: function(size) {
+  random: (size = 1) => {
 
-    size = size || 1;
+    let arr = [];
+    let result = '';
 
-    var arr = [];
-    var result = '';
-
-    Object.keys(mapping).forEach(function(key) {
-      var val = mapping[key];
+    Object.keys(mapping).forEach((key) => {
+      const val = mapping[key];
       arr.push({
         key: key,
         value: val
       });
     });
-    var shuffled = shuffle(arr);
+    const shuffled = shuffle(arr);
 
-    for (var i=0; i<size; i++) {
+    for (let i=0; i<size; i++) {
       result += shuffled[i].value;
     }
     return result.trim();
-  }
-};
+  },
+
+  mapping
+}
