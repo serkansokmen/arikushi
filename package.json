@@ -30,6 +30,7 @@
     "chai": "3.5.0",
     "commitizen": "2.5.0",
     "cz-conventional-changelog": "1.1.5",
+    "knuth-shuffle": "1.0.1",
     "mocha": "2.4.4",
     "semantic-release": "^4.3.5"
   },

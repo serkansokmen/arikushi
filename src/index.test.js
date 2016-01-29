@@ -45,11 +45,13 @@ describe('arikushi', function() {
 
   describe('random', function() {
     it('should return a random result', function() {
-      var result = arikushi.random(3);
-      expect(result).to.be.a('string');
+      var result0 = arikushi.random(3);
+      expect(result0).to.be.a('string');
 
-      result = arikushi.random();
-      expect(result).to.be.a('string');
+      var result1 = arikushi.random(3);
+      expect(result1).to.be.a('string');
+
+      expect(result0).to.not.equal(result1);
     });
   });
 });

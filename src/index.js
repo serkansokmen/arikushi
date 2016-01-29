@@ -1,3 +1,4 @@
+var shuffle = require('knuth-shuffle').knuthShuffle;
 var mapping = require('./mapping.json').mapping;
 
 module.exports = {
@@ -18,18 +19,24 @@ module.exports = {
   },
 
   random: function(size) {
-    var keys = [];
-    var vals = [];
-    var result = '';
+
     size = size || 1;
+
+    var arr = [];
+    var result = '';
+
     Object.keys(mapping).forEach(function(key) {
       var val = mapping[key];
-      keys.push(key);
-      vals.push(val);
+      arr.push({
+        key: key,
+        value: val
+      });
     });
+    var shuffled = shuffle(arr);
+
     for (var i=0; i<size; i++) {
-      result += vals[i];
+      result += shuffled[i].value;
     }
-    return result;
+    return result.trim();
   }
 };
