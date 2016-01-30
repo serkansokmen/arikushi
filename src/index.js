@@ -1,42 +1,49 @@
 var shuffle = require('knuth-shuffle').knuthShuffle;
 var mapping = require('./mapping.json').mapping;
 
-module.exports = {
-  mapping: mapping,
-  convert: function(str) {
+function Converter() {
+  this.mapping = mapping;
+}
 
-    if (str === null || (str != null && typeof str !== 'string')) {
-      return '';
+Converter.prototype.convert = function() {
+  var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));
+  var str = '';
+  var result = '';
+
+  args.forEach(function(arg) {
+    if ((/^[a-zA-Z ]*$/).test(arg)) {
+      str += arg + ' ';
     }
-    var result = '';
-    for (var i = 0; i < str.length; i++) {
-      var char = str.charAt(i).toUpperCase();
-      if (mapping.hasOwnProperty(char)) {
-        result += mapping[char];
-      }
-    }
-    return result;
-  },
+  });
 
-  random: function(size) {
-
-    size = size || 1;
-
-    var arr = [];
-    var result = '';
-
-    Object.keys(mapping).forEach(function(key) {
-      var val = mapping[key];
-      arr.push({
-        key: key,
-        value: val
-      });
-    });
-    var shuffled = shuffle(arr);
-
-    for (var i=0; i<size; i++) {
-      result += shuffled[i].value;
-    }
-    return result.trim();
+  for (var i = 0, char = ''; i < str.length; i++) {
+    char = str.charAt(i).toLowerCase();
+    result += mapping[char];
   }
+  return result.trim();
 };
+
+Converter.prototype.random = function() {
+  var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));
+  var result = '';
+  var possibles = '';
+
+  var arr = [];
+  Object.keys(mapping).forEach(function(key) {
+    possibles += key;
+  });
+
+  args.forEach(function(arg) {
+    arg = arg*1;
+    for (var i=0; i<arg; i++) {
+      var key = possibles.charAt(Math.floor(Math.random()*possibles.length));
+      result += mapping[key];
+    }
+    result += ' ';
+  });
+
+  return result.trim();
+};
+
+
+module.exports = new Converter();

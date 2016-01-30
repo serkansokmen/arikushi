@@ -10,20 +10,20 @@ Generate Japanese word mapping from Latin characters
 #### Installation
 
 ```
-npm install arikushi
+npm install --save arikushi
 ```
 
 #### Usage
 
 ```javascript
+// Require the library
 var arikushi = require('arikushi');
-var str = 'Hello World';
-var converted = arikushi.convert(str);
-console.log(converted);
-```
 
-Or use `random(size)` to generate random word of `size` syllables:
+// Pass any number of string arguments
+arikushi.convert('Hello', 'World');
 
-```javascript
-var random = arikushi.random(3);
+// Pass any number of number arguments
+arikushi.random(3);
+arikushi.random(2, 5, 1);
+arikushi.random(4, 2);
 ```
