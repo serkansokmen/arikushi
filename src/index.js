@@ -43,4 +43,8 @@ Converter.prototype.random = function() {
   return result.trim();
 };
 
+Converter.prototype.getMapping = function() {
+  return this.mapping;
+};
+
 module.exports = new Converter();

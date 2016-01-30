@@ -39,4 +39,10 @@ describe('arikushi', function() {
       expect(r0).to.not.equal(r1);
     });
   });
+
+  describe('getMapping', function() {
+    it('should return the list of available mappings', function() {
+      expect(a.getMapping()).to.be.an('object');
+    })
+  })
 });
