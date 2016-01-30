@@ -6,15 +6,12 @@ Generate Japanese word mapping from Latin characters
 [![GitHub license](https://img.shields.io/github/license/serkansokmen/arikushi.svg?style=flat-square)]()
 
 
-
 #### Installation
-
 ```
 npm install --save arikushi
 ```
 
 #### Usage
-
 ```javascript
 // Require the library
 var arikushi = require('arikushi');

@@ -27,8 +27,6 @@ Converter.prototype.random = function() {
   var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));
   var result = '';
   var possibles = '';
-
-  var arr = [];
   Object.keys(mapping).forEach(function(key) {
     possibles += key;
   });
@@ -44,6 +42,5 @@ Converter.prototype.random = function() {
 
   return result.trim();
 };
-
 
 module.exports = new Converter();
