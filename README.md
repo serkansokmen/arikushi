@@ -23,4 +23,7 @@ arikushi.convert('Hello', 'World');
 arikushi.random(3);
 arikushi.random(2, 5, 1);
 arikushi.random(4, 2);
+
+// Get a list of available mappings
+arikushi.getMapping();
 ```
