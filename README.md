@@ -16,16 +16,23 @@ npm install --save arikushi
 #### Usage
 ```javascript
 // Require the library
-var arikushi = require('arikushi');
+var a = require('arikushi');
 
 // Pass any number of string arguments
-arikushi.convert('Hello', 'World');
+var result = a.convert('Hello', 'World');
+console.log(result);
 
 // Pass any number of number arguments
-arikushi.random(3);
-arikushi.random(2, 5, 1);
-arikushi.random(4, 2);
+result = a.random(3);
+console.log(result);
+
+result = a.random(2, 5, 1);
+console.log(result);
+
+result = a.random(4, 2);
+console.log(result);
 
 // Get a list of available mappings
-arikushi.getMapping();
+var mapping = arikushi.getMapping();
+console.log(mapping);
 ```
