@@ -1,6 +1,5 @@
 {
   "name": "arikushi",
-  "version": "0.0.0-semantically-released",
   "description": "Generate Japanese word mapping from Latin characters",
   "main": "src/index.js",
   "scripts": {
