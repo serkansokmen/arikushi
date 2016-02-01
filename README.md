@@ -33,6 +33,6 @@ result = a.random(4, 2);
 console.log(result);
 
 // Get a list of available mappings
-var mapping = arikushi.getMapping();
+var mapping = a.getMapping();
 console.log(mapping);
 ```
