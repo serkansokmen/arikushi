@@ -43,11 +43,11 @@
     "semantic-release": "^4.3.5"
   },
   "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    },
     "ghooks": {
       "pre-commit": "npm run test:single && npm run check-coverage"
-    },
-    "commitizen": {
-      "path": "node_modules/cz-conventional-changelog"
     }
   }
 }
