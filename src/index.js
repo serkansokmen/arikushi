@@ -18,7 +18,7 @@ Converter.prototype.convert = function() {
 
   for (var i = 0, char = ''; i < str.length; i++) {
     char = str.charAt(i).toLowerCase();
-    result += mapping[char];
+    result += char === ' ' ? char : mapping[char];
   }
   return result.trim();
 };

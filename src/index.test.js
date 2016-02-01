@@ -1,5 +1,9 @@
-var expect = require('chai').expect;
+var chai = require('chai');
+var expect = chai.expect;
+var chaiString = require('chai-string');
 var a = require('./index');
+
+chai.use(chaiString);
 
 describe('arikushi', function() {
   describe('convert', function() {
@@ -19,6 +23,10 @@ describe('arikushi', function() {
 
     it('should work with chars not in mapping', function() {
       expect(a.convert('ÜĞİŞÇÖüğışçö')).to.have.length(0);
+    });
+
+    it('should not have `undefined` in result', function() {
+      expect(a.convert('lorem', 'ipsum')).to.have.indexOf('undefined', -1);
     });
   });
 
