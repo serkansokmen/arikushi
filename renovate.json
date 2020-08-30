@@ -1,0 +1,20 @@
+{
+  "extends": ["config:base"],
+  "baseBranches": ["develop"],
+  "bumpVersion": null,
+  "automerge": true,
+  "assignees": ["serkansokmen"],
+  "timezone": "Europe/Istanbul",
+  "schedule": "before 8pm every weekday",
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": "after 10pm on sunday"
+  },
+  "packageRules": [
+    {
+      "depTypeList": ["devDependencies"],
+      "updateTypes": ["minor"],
+      "automerge": true
+    }
+  ]
+}
