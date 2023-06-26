@@ -12,7 +12,10 @@ pids
 lib-cov
 
 # Coverage directory used by tools like istanbul
-coverage
+coverage/
+
+# Jest coverage directory
+coverage-jest/
 
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
@@ -34,3 +37,12 @@ node_modules
 
 # Build directory
 lib/
+
+# IDE settings
+.idea/
+
+# TypeScript declaration files
+*.d.ts
+
+# TS Build output
+dist/
