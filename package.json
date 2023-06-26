@@ -1,6 +1,6 @@
 {
   "name": "arikushi",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Generate Japanese word mapping from Latin characters",
   "main": "./lib/Converter.js",
   "types": "./lib/Converter.d.ts",
