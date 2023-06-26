@@ -23,5 +23,3 @@ jobs:
       - run: npm ci
       - run: npm run build --if-present
       - run: npm test -- --coverage
-      - name: Semantic release
-        run: npm run semantic-release
